@@ -1,0 +1,64 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --color-background: #1A1A1A;
+  --color-accent: #FFC107;
+  --color-input: #2D2D2D;
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: white;
+}
+
+.main-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-bubble {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px var(--color-accent); }
+  50% { box-shadow: 0 0 15px var(--color-accent); }
+  100% { box-shadow: 0 0 5px var(--color-accent); }
+}
+
+.glow-effect {
+  box-shadow: 0 0 5px var(--color-accent), 0 0 15px rgba(255, 193, 7, 0.7);
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000; /* Black background for the track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ffc107; /* Scrollbar thumb color */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Firefox Support */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Thinner scrollbar */
+  scrollbar-color: #ffc107 #000; /* Thumb color #ffc107, track color #000 */
+}
